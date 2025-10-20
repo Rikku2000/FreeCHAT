@@ -85,7 +85,7 @@
 						data.forEach(m=>{
 							let div = document.createElement("div");
 							div.className = m.from === "<?=$user?>" ? "msg me" : "msg";
-							div.innerHTML=`<div style="padding: 2px;"><strong>${m.from}</strong>: <span class="w3-right w3-tiny">${m.time}</span><span style="font-style: ${m.style}; color: ${m.color};">${m.text}</span></div>`;
+							div.innerHTML=`<div class='w3-msg'><div class='w3-msg-bubble'><div class='meta'><strong>${m.from}</strong> <span class='w3-right w3-tiny'>${m.time}</span></div><div style='font-style:" + m.style + "; color:" + m.color + ";'>${m.text}</div></div></div>`;
 							chat.appendChild(div);
 						});
 

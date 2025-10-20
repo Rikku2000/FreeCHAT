@@ -23,14 +23,16 @@
 				<div class="w3-table-scroll w3-border w3-border-theme-light w3-threequarter">
 					<div class="w3-table-scroll w3-chatfield" id="chatBox" style="overflow-y: scroll; padding: 1px;"></div>
 				</div>
-				<div class="w3-table-scroll w3-border w3-border-theme-light w3-hide-small w3-quarter w3-chatfield" id="onlineUsers" style="overflow-y: scroll; padding: 1px;"></div>
+				<div class="w3-table-scroll w3-border w3-border-theme-light w3-quarter">
+					<div class="w3-table-scroll w3-border w3-border-theme-light w3-hide-small w3-chatfield" id="onlineUsers" style="overflow-y: scroll; padding: 1px;"></div>
+				</div>
 				<div class="w3-hide-small w3-tiny" id="typingIndicator" style="float: left; font-style: italic; color: #aaa; width: 100%;"></div>
 			</div>
 			<div class="w3-bottom w3-theme-white w3-chatcontainer">
 				<form id="chatForm">
 					<audio id="joinSound" src="assets/online.wav"></audio>
 					<audio id="leaveSound" src="assets/offline.wav"></audio>
-					<audio id="msgSound" src="assets/message.wav"></audio>
+					<!-- <audio id="msgSound" src="assets/message.wav"></audio> -->
 	';
 
 	if (!isset($bans[$user])) {
@@ -111,9 +113,9 @@
 						data.forEach(m=>{
 							let div=document.createElement("div");
 							if (m.user == "<?=$user?>" || m.name == "<?=CHATBOT?>" || m.invite == "no")
-								div.innerHTML="<div style='padding: 2px;'><span class='w3-hover-text-theme' style='text-decoration: none;'><i class='fas "+ m.icon.toLowerCase() +"'></i> <strong>"+ m.name +"</strong></span>: <span class='w3-right w3-tiny'>"+ m.time +"</span><span style='font-style: "+ m.style +"; color: "+ m.color +";'>"+ m.text +"</span></div>";
+								div.innerHTML ="<div class='w3-msg-me'><div class='w3-msg-me-bubble'><div class='meta'><i class='fas " + m.icon.toLowerCase() + "'></i> <strong>" + m.name + "</strong> <span class='w3-right w3-tiny'>" + m.time + "</span></div><div style='font-style:" + m.style + "; color:" + m.color + ";'>" + m.text + "</div></div></div>";
 							else
-								div.innerHTML="<div style='padding: 2px;'><a class='w3-hover-text-theme' href='private.php?user="+ m.user +"' style='text-decoration: none;'><i class='fas "+ m.icon.toLowerCase() +"'></i> <strong>"+ m.name +"</strong></a>: <span class='w3-right w3-tiny'>"+ m.time +"</span><span style='font-style: "+ m.style +"; color: "+ m.color +";'>"+ m.text +"</span></div>";
+								div.innerHTML ="<div class='w3-msg'><div class='w3-msg-bubble'><div class='meta'><a class='w3-hover-text-theme' href='private.php?user="+ m.user +"' style='text-decoration: none;'><i class='fas " + m.icon.toLowerCase() + "'></i> <strong>" + m.name + "</strong></a> <span class='w3-right w3-tiny'>" + m.time + "</span></div><div style='font-style:" + m.style + "; color:" + m.color + ";'>" + m.text + "</div></div></div>";
 							chatBox.appendChild(div);
 						});
 
@@ -296,17 +298,17 @@
 						msgBox.innerHTML = "";
 						data.forEach(m => {
 							const div = document.createElement("div");
-							div.innerHTML ="<div style='padding: 2px;'><strong>"+ m.from +"</strong>: <span class='w3-right w3-tiny'>"+ m.time +"</span><span style='font-style: "+ m.style +"; color: "+ m.color +";'>"+ m.text +"</span></div>";
+							div.innerHTML ="<div class='w3-msg'><div class='w3-msg-bubble'><div class='meta'><strong>" + m.from + "</strong></a> <span class='w3-right w3-tiny'>" + m.time + "</span></div><div style='font-style:" + m.style + "; color:" + m.color + ";'>" + m.text + "</div></div></div>";
 							msgBox.appendChild(div);
 						});
 
-						if (data.length > lastPrivatCount) {
+						/* if (data.length > lastPrivatCount) {
 							let last = data[data.length - 1];
 							if (last.from == username)
 								document.getElementById("msgSound").play();
 
 						}
-						lastPrivatCount = data.length;
+						lastPrivatCount = data.length; */
 
 						msgBox.scrollTop = msgBox.scrollHeight;
 					});

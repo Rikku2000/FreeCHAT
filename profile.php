@@ -75,11 +75,11 @@
 				</header>
 				<div class="w3-half">
 					<div class="w3-row-padding w3-margin-bottom">
-						<lable>'. $lang["lable"]["name"] .'</lable>
+						<div class="w3-lable">'. $lang["lable"]["name"] .'</div>
 						<input class="w3-input" name="name" type="text" placeholder="Fullname" style="width: 100%" value="'. $users[$user]["name"] .'" minlength="8" maxlength="16" required>
 					</div>
 					<div class="w3-row-padding w3-margin-bottom">
-						<lable>'. $lang["lable"]["gender"] .'</lable>
+						<div class="w3-lable">'. $lang["lable"]["gender"] .'</div>
 						<select class="w3-select" name="gender">
 							<option value="fa-venus-mars" '. $gender_select1 .'>Hetero</option>
 							<option value="fa-venus-double" '. $gender_select2 .'>Lesbian</option>
@@ -99,7 +99,7 @@
 				</div>
 				<div class="w3-half">
 					<div class="w3-row-padding w3-margin-bottom">
-						<lable>'. $lang["lable"]["language"] .'</lable>
+						<div class="w3-lable">'. $lang["lable"]["language"] .'</div>
 						<select class="w3-select" name="language">
 							<option value="de_de" '. $lang_select1 .'>'. $lang["lang"]["de_de"] .'</option>
 							<option value="en_us" '. $lang_select2 .'>'. $lang["lang"]["en_us"] .'</option>
@@ -107,7 +107,7 @@
 						</select>
 					</div>
 					<div class="w3-row-padding w3-margin-bottom">
-						<lable>'. $lang["lable"]["theme"] .'</lable>
+						<div class="w3-lable">'. $lang["lable"]["theme"] .'</div>
 						<select class="w3-select" name="theme">
 							<option value="dark" '. $lang_theme1 .'>'. $lang["theme"]["dark"] .'</option>
 							<option value="light" '. $lang_theme2 .'>'. $lang["theme"]["light"] .'</option>
@@ -116,7 +116,7 @@
 				</div>
 				<div class="w3-half">
 					<div class="w3-row-padding w3-margin-bottom">
-						<lable>'. $lang["lable"]["invite"] .'</lable>
+						<div class="w3-lable">'. $lang["lable"]["invite"] .'</div>
 						<select class="w3-select" name="invite">
 							<option value="yes" '. $lang_invite1 .'>'. $lang["invite"]["enable"] .'</option>
 							<option value="no" '. $lang_invite2 .'>'. $lang["invite"]["disable"] .'</option>

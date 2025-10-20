@@ -31,24 +31,24 @@
 				</header>
 				<div class="w3-third">
 					<div class="w3-row-padding w3-margin-bottom">
-						<lable>'. $lang["lable"]["username"] .'</lable>
+						<div class="w3-lable">'. $lang["lable"]["username"] .'</div>
 						<input class="w3-input" name="username" type="text" placeholder="'. $lang["register"]["username"] .'" style="width: 100%" minlength="3" maxlength="16" required>
 					</div>
 				</div>
 				<div class="w3-third">
 					<div class="w3-row-padding w3-margin-bottom">
-						<lable>'. $lang["lable"]["password"] .'</lable>
+						<div class="w3-lable">'. $lang["lable"]["password"] .'</div>
 						<input class="w3-input" name="password" type="text" placeholder="'. $lang["register"]["password"] .'" style="width: 100%" minlength="8" maxlength="16" required>
 					</div>
 				</div>
 				<div class="w3-third">
 					<div class="w3-row-padding w3-margin-bottom">
-						<lable>'. $lang["lable"]["name"] .'</lable>
+						<div class="w3-lable">'. $lang["lable"]["name"] .'</div>
 						<input class="w3-input" name="name" type="text" placeholder="'. $lang["register"]["name"] .'" style="width: 100%" minlength="3" maxlength="16" required>
 					</div>
 				</div>
 				<div class="w3-half">
-					<lable>'. $lang["lable"]["gender"] .'</lable>
+					<div class="w3-lable">'. $lang["lable"]["gender"] .'</div>
 					<div class="w3-row-padding w3-margin-bottom">
 						<select class="w3-select" id="style" name="gender">
 							<option value="fa-venus-mars">Hetero</option>
@@ -68,7 +68,7 @@
 					</div>
 				</div>
 				<div class="w3-half">
-					<lable>'. $lang["lable"]["language"] .'</lable>
+					<div class="w3-lable">'. $lang["lable"]["language"] .'</div>
 					<div class="w3-row-padding w3-margin-bottom">
 						<select class="w3-select" id="style" name="language">
 							<option value="de_de">'. $lang["lang"]["de_de"] .'</option>
