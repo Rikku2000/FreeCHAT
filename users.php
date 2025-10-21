@@ -20,8 +20,10 @@
 					</tbody>
 				</table>
 			</div>
-			<input type="text" id="memberSearch" class="w3-input-theme w3-left" placeholder="'. $lang["users"]["search"] .'">
-			<div class="w3-row-padding w3-margin-bottom w3-left" id="pagination"></div>
+			<div class="w3-row-padding w3-margin-bottom">
+				<input type="text" id="memberSearch" class="w3-input-theme w3-left" placeholder="'. $lang["users"]["search"] .'">
+				<div class="w3-row-padding w3-margin-bottom w3-left" id="pagination"></div>
+			</div>
 		</div>
 	';
 ?>
