@@ -8,10 +8,11 @@ sort($key, SORT_STRING);
 $key = implode("|", $key);
 $privates = load_private ();
 $messages = $privates[$key];
+$users=load_users();
 foreach ($messages as &$msg) {
 	if (isset($msg["text"])) {
 		$msg["text"] = decryptMessage($msg["text"]);
-		if ($users[$_SESSION["user"]]["theme"] == "dark") {
+		if ($users[$me]["theme"] == "dark") {
 			if ($msg["color"] == "#000000")
 				$msg["color"] = str_replace ($msg["color"], "#ffffff", "#000000");
 			else
