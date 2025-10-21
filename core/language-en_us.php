@@ -110,4 +110,39 @@ $lang["invite"]["title"]="Private Chat Request";
 $lang["invite"]["text"]="Wants to start a private chat.";
 $lang["invite"]["enable"]="Enable";
 $lang["invite"]["disable"]="Disable";
+
+$lang["template"]["text1"]='MEET NEW PEOPLE AND CHAT';
+$lang["template"]["text2"]='
+	Have fun and meet lots of new people, <h4 class="w3-text-theme"><strong><i class="fas fa-message"></i> '. TITLE .'</strong></h4></br>
+	offers exciting topics and the opportunity to connect with new</br>
+	people in your city or surrounding area quickly, safely, and for</br>
+	free. There is no requirement to use your real name, so you</br>
+	can chat completely anonymously. Do not wait any longer...
+';
+$lang["template"]["text3"]='- Chatters Online -';
+$lang["template"]["text4"]='Core Principles';
+$lang["template"]["text5"]='
+	<strong>Respect Others:</strong> Treat all users with courtesy and respect, regardless of their background or opinions.</br>
+	<strong>Be Kind:</strong> Foster a friendly and positive atmosphere by being considerate of others.</br>
+	<strong>Listen to Moderators:</strong> Follow the instructions of the moderation team to help maintain order and safety.</br>
+	<strong>Maintain a Positive Tone:</strong> Keep conversations cheerful and constructive, even during disagreements.
+';
+$lang["template"]["text6"]='Content and Behavior';
+$lang["template"]["text7"]='
+	<strong>Stay on Topic:</strong> Keep conversations relevant to the chats purpose to ensure a focused discussion.</br>
+	<strong>Avoid Harassment and Hate Speech:</strong> Do not engage in bullying, sexism, racism, homophobia, transphobia, or any form of hate speech.</br>
+	<strong>No Personal Attacks:</strong> Avoid insults or comments designed to berate other users.</br>
+	<strong>Do not Spread Misinformation:</strong> Verify information before sharing it to avoid spreading unverified news or content.
+';
+$lang["template"]["text8"]='Privacy and Safety';
+$lang["template"]["text9"]='
+	<strong>Protect Your Privacy:</strong> Be cautious about sharing confidential information, as chat messages can be screenshotted.</br>
+	<strong>Be Mindful of Anonymity:</strong> Understand that chat rooms can be anonymous, which can make it easier for malicious users to lie about their identity and intentions.
+';
+$lang["template"]["text10"]='General Etiquette';
+$lang["template"]["text11"]='
+	<strong>Introduce Yourself:</strong> Make an effort to introduce yourself when joining a conversation.</br>
+	<strong>Use Proper Grammar and Spelling:</strong> Maintain clear and understandable communication.</br>
+	<strong>Keep it Simple:</strong> Avoid unnecessary complexity in your messages to make the conversation easier to follow.
+';
 ?>

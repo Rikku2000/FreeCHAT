@@ -110,4 +110,36 @@ $lang["invite"]["title"]="Private Chat-Anfrage";
 $lang["invite"]["text"]="Möchte einen privaten Chat starten.";
 $lang["invite"]["enable"]="Aktivieren";
 $lang["invite"]["disable"]="Deaktivieren";
+
+$lang["template"]["text1"]='NEUE LEUTE KENNENLERNEN UND CHATTEN';
+$lang["template"]["text2"]='
+	Haben Sie Spaß und lernen Sie viele neue Leute kennen. <h4 class="w3-text-theme"><strong><i class="fas fa-message"></i> '. TITLE .'</strong></h4></br>
+	bietet spannende Themen und die Möglichkeit, schnell, sicher und kostenlos neue Leute in Ihrer Stadt oder Umgebung kennenzulernen. Sie müssen Ihren richtigen Namen nicht verwenden, sodass Sie völlig anonym chatten können. Warten Sie nicht länger...
+';
+$lang["template"]["text3"]='- Chatters Online -';
+$lang["template"]["text4"]='Grundprinzipien';
+$lang["template"]["text5"]='
+	<strong>Respektvoller Umgang:</strong> Behandeln Sie alle Nutzer höflich und respektvoll, unabhängig von ihrer Herkunft oder Meinung.</br>
+	<strong>Sei freundlich:</strong> Fördern Sie eine freundliche und positive Atmosphäre, indem Sie Rücksicht auf andere nehmen.</br>
+	<strong>Hören Sie auf Moderatoren:</strong> Befolgen Sie die Anweisungen des Moderationsteams, um Ordnung und Sicherheit zu gewährleisten.</br>
+	<strong>Bewahren Sie einen positiven Ton:</strong> Sorgen Sie für eine fröhliche und konstruktive Unterhaltung, auch bei Meinungsverschiedenheiten.
+';
+$lang["template"]["text6"]='Inhalt und Verhalten';
+$lang["template"]["text7"]='
+	<strong>Bleiben Sie beim Thema:</strong> Halten Sie Gespräche relevant für den Chatzweck, um eine fokussierte Diskussion zu gewährleisten.</br>
+	<strong>Vermeiden Sie Belästigung und Hassreden:</strong> Beteiligen Sie sich nicht an Mobbing, Sexismus, Rassismus, Homophobie, Transphobie oder jeglicher Form von Hassreden.</br>
+	<strong>Keine persönlichen Angriffe:</strong> Vermeiden Sie Beleidigungen oder Kommentare, die andere Nutzer beschimpfen.</br>
+	<strong>Verbreiten Sie keine Fehlinformationen:</strong> Überprüfen Sie Informationen, bevor Sie sie teilen, um die Verbreitung ungeprüfter Nachrichten oder Inhalte zu vermeiden.
+';
+$lang["template"]["text8"]='Datenschutz und Sicherheit';
+$lang["template"]["text9"]='
+	<strong>Schützen Sie Ihre Privatsphäre:</strong> Seien Sie vorsichtig beim Teilen vertraulicher Informationen, da Chat-Nachrichten als Screenshot gespeichert werden können.</br>
+	<strong>Achten Sie auf Anonymität:</strong> Bedenken Sie, dass Chatrooms anonym sein können, was es böswilligen Nutzern erleichtern kann, über ihre Identität und Absichten zu lügen.
+';
+$lang["template"]["text10"]='Allgemeine Umgangsformen';
+$lang["template"]["text11"]='
+	<strong>Stellen Sie sich vor:</strong> Stellen Sie sich vor, wenn Sie an einer Unterhaltung teilnehmen.</br>
+	<strong>Achten Sie auf korrekte Grammatik und Rechtschreibung:</strong> Sorgen Sie für eine klare und verständliche Kommunikation.</br>
+	<strong>Halten Sie es einfach:</strong> Vermeiden Sie unnötige Komplexität in Ihren Nachrichten, um der Unterhaltung leichter folgen zu können.
+';
 ?>

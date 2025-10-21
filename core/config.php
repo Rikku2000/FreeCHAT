@@ -19,6 +19,7 @@ define("HEARTBEATINTERVAL", 1000);
 define("PRIVATEINTERVAL", 500);
 define("SECRETKEY", "FreeChatSecretKey");
 
+include "language-en_us.php";
 if (!isset($_SESSION['lang'])) $_SESSION['lang']="en_us";
 include "language-". $_SESSION['lang'] .".php";
 

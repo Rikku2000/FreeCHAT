@@ -49,7 +49,7 @@
 		<nav class="w3-sidebar w3-collapse w3-theme-white w3-table-scroll" style="z-index: 3; width: 300px;" id="sidebar">
 	';
 
-	if ($users[$user]["is_admin"] != false) {
+	if (($users[$user]["is_admin"] != false) && (isset($_SESSION["user"]))) {
 		echo '
 			<div class="w3-container w3-text-theme">
 				<h5><strong><i class="fas fa-bars"></i> '. $lang["page"]["admin"] .'</strong></h5>
@@ -90,38 +90,40 @@
 				<a href="register.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-signature"></i> '. $lang["page"]["register"] .'</a>
 			';
 		} else {
-			if (strrpos ($_SERVER["REQUEST_URI"], "index.php") != false) {
+			if(isset($_SESSION["user"])) {
+				if (strrpos ($_SERVER["REQUEST_URI"], "index.php") != false) {
+					echo '
+						<a href="rooms.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-house"></i> '. $lang["page"]["rooms"] .'</a>
+						<a href="users.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-users"></i> '. $lang["page"]["users"] .'</a>
+						<a href="profile.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-user"></i> '. $lang["page"]["profile"] .'</a>
+					';
+				} else if (strrpos ($_SERVER["REQUEST_URI"], "private.php") != false) {
+					echo '
+						<a href="rooms.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-house"></i> '. $lang["page"]["rooms"] .'</a>
+						<a href="users.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-users"></i> '. $lang["page"]["users"] .'</a>
+						<a href="profile.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-user"></i> '. $lang["page"]["profile"] .'</a>
+					';
+				} else if (strrpos ($_SERVER["REQUEST_URI"], "rooms.php") != false) {
+					echo '
+						<a href="users.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-users"></i> '. $lang["page"]["users"] .'</a>
+						<a href="profile.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-user"></i> '. $lang["page"]["profile"] .'</a>
+					';
+				} else if (strrpos ($_SERVER["REQUEST_URI"], "profile.php") != false) {
+					echo '
+						<a href="rooms.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-house"></i> '. $lang["page"]["rooms"] .'</a>
+						<a href="users.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-users"></i> '. $lang["page"]["users"] .'</a>
+					';
+				} else if (strrpos ($_SERVER["REQUEST_URI"], "users.php") != false) {
+					echo '
+						<a href="rooms.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-house"></i> '. $lang["page"]["rooms"] .'</a>
+						<a href="profile.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-user"></i> '. $lang["page"]["profile"] .'</a>
+					';
+				}
+
 				echo '
-					<a href="rooms.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-house"></i> '. $lang["page"]["rooms"] .'</a>
-					<a href="users.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-users"></i> '. $lang["page"]["users"] .'</a>
-					<a href="profile.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-user"></i> '. $lang["page"]["profile"] .'</a>
-				';
-			} else if (strrpos ($_SERVER["REQUEST_URI"], "private.php") != false) {
-				echo '
-					<a href="rooms.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-house"></i> '. $lang["page"]["rooms"] .'</a>
-					<a href="users.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-users"></i> '. $lang["page"]["users"] .'</a>
-					<a href="profile.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-user"></i> '. $lang["page"]["profile"] .'</a>
-				';
-			} else if (strrpos ($_SERVER["REQUEST_URI"], "rooms.php") != false) {
-				echo '
-					<a href="users.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-users"></i> '. $lang["page"]["users"] .'</a>
-					<a href="profile.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-user"></i> '. $lang["page"]["profile"] .'</a>
-				';
-			} else if (strrpos ($_SERVER["REQUEST_URI"], "profile.php") != false) {
-				echo '
-					<a href="rooms.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-house"></i> '. $lang["page"]["rooms"] .'</a>
-					<a href="users.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-users"></i> '. $lang["page"]["users"] .'</a>
-				';
-			} else if (strrpos ($_SERVER["REQUEST_URI"], "users.php") != false) {
-				echo '
-					<a href="rooms.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-house"></i> '. $lang["page"]["rooms"] .'</a>
-					<a href="profile.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-user"></i> '. $lang["page"]["profile"] .'</a>
+					<a href="logout.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-sign-out"></i> '. $lang["page"]["logout"] .'</a>
 				';
 			}
-
-			echo '
-				<a href="logout.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-sign-out"></i> '. $lang["page"]["logout"] .'</a>
-			';
 		}
 
 		echo '

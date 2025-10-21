@@ -8,7 +8,7 @@
   --text: #0e1320;
   --text-dim: #1f2a3c;
   --border: #d8deea;
-  --accent: #ff9500;
+  --accent: #f8fafc;
   --accent-2: #cc6f00;
   --success: #15803d;
   --danger: #b91c1c;
@@ -28,7 +28,7 @@ html, body { background: var(--bg-0); color: var(--text); }
 html { scrollbar-color: #c8cfdb transparent; scrollbar-width: thin; }
 
 .w3-theme-white { background: var(--bg-0) !important; color: var(--text) }
-.w3-theme { background: var(--accent) !important; color: #0b0b0b !important; }
+.w3-theme { background: var(--accent) !important; var(--text) !important; }
 .w3-text-theme { color: var(--text) !important; }
 .w3-border-theme, .w3-border-theme-light, .w3-border-theme-dark { border-color: var(--border) !important; }
 
@@ -91,7 +91,7 @@ table, .w3-table { border-collapse: separate !important; border-spacing: 0 !impo
 .w3-striped tbody tr:nth-child(even) { background: rgba(10,15,30,.03) !important; }
 .w3-hoverable tbody tr:hover { background: rgba(10,15,30,.05) !important; }
 
-a, .w3-link { color: var(--accent-2); text-decoration: none; }
+a, .w3-link { color: var(--muted); text-decoration: none; }
 a:hover, .w3-link:hover { color: var(--text) !important; text-decoration: none; font-weight: bold; }
 
 .w3-badge, .w3-tag { background: var(--elev-2) !important; color: var(--text) !important; border: 1px solid var(--border) !important; }

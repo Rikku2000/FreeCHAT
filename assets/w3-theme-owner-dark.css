@@ -8,7 +8,7 @@
   --text: #e8ecf1;
   --text-dim: #cdd5e0;
   --border: #2f3644;
-  --accent: #ff9500;
+  --accent: #242b3a;
   --accent-2: #ffb547;
   --success: #22c55e;
   --danger: #ef4444;
@@ -28,7 +28,7 @@ html, body { background: var(--bg-0); color: var(--text); }
 html { scrollbar-color: var(--border) transparent; scrollbar-width: thin; }
 
 .w3-theme-white { background: var(--bg-0) !important; color: var(--text) !important; }
-.w3-theme { background: var(--accent) !important; color: #0b0b0b !important; }
+.w3-theme { background: var(--accent) !important; var(--text) !important; }
 .w3-text-theme { color: var(--text) !important; }
 .w3-border-theme, .w3-border-theme-light, .w3-border-theme-dark { border-color: var(--border) !important; }
 
@@ -86,16 +86,16 @@ html { scrollbar-color: var(--border) transparent; scrollbar-width: thin; }
 .w3-select-theme { padding: 8px 10px !important; }
 
 table, .w3-table { border-collapse: separate !important; border-spacing: 0 !important; }
-.w3-table th { background: var(--elev-2); color: var(--text-dim); border-bottom: 1px solid var(--border); }
+.w3-table th { background: var(--muted); color: var(--text-dim); border-bottom: 1px solid var(--border); }
 .w3-table td { border-top: 1px solid var(--border); }
 .w3-striped tbody tr:nth-child(even) { background: rgba(255,255,255,.02) !important; }
 .w3-hoverable tbody tr:hover { background: rgba(255,255,255,.04) !important; }
 
-a, .w3-link { color: var(--accent-2); text-decoration: none; }
+a, .w3-link { color: var(--muted); text-decoration: none; }
 a:hover, .w3-link:hover { color: var(--text) !important; text-decoration: none; font-weight: bold; }
 
 .w3-badge, .w3-tag { background: var(--elev-2) !important; color: var(--text) !important; border: 1px solid var(--border) !important; }
-.w3-badge.w3-theme, .w3-tag.w3-theme { background: var(--accent) !important; color: #0b0b0b !important; border-color: transparent !important; }
+.w3-badge.w3-theme, .w3-tag.w3-theme { background: var(--muted) !important; color: #0b0b0b !important; border-color: transparent !important; }
 
 .w3-pale-green, .w3-success { background: color-mix(in oklab, var(--success) 20%, var(--bg-1)) !important; color: var(--text); border: 1px solid color-mix(in oklab, var(--success) 40%, var(--border)) !important; }
 .w3-pale-red, .w3-danger   { background: color-mix(in oklab, var(--danger) 20%, var(--bg-1)) !important;  color: var(--text); border: 1px solid color-mix(in oklab, var(--danger) 40%, var(--border)) !important; }

@@ -9,7 +9,7 @@
 		$gen=$_POST["gender"];
 		$language=$_POST["language"];
 		if($user && $pass && !isset($users[$user])){
-			$users[$user]=["password"=>password_hash($pass,PASSWORD_DEFAULT),"name"=>$name,"gender"=>$gen,"language"=>$language,"theme"=>"light","invite"=>"yes","is_admin"=>count($users)==0];
+			$users[$user]=["password"=>encryptMessage ($pass),"name"=>$name,"gender"=>$gen,"language"=>$language,"theme"=>"light","invite"=>"yes","is_admin"=>count($users)==0];
 			save_users($users);
 			$_SESSION["user"]=$user;
 			$_SESSION['lang']=$language;

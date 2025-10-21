@@ -6,10 +6,11 @@
 		$user=$_POST["username"];
 		$pass=$_POST["password"];
 		$bans=load_bans();
+
 		if (isset($bans[$user]))
 			$message=$lang["message"]["banned"];
 		else {
-			if(isset($users[$user]) && password_verify($pass,$users[$user]["password"])){
+			if(isset($users[$user]) && ($pass == decryptMessage ($users[$user]["password"]))){
 				$_SESSION["user"]=$user;
 				$_SESSION["lang"]=$users[$user]["language"];
 				header("Location: rooms.php");
