@@ -9,7 +9,14 @@ $key = implode("|", $key);
 $privates = load_private ();
 $messages = $privates[$key];
 foreach ($messages as &$msg) {
-	if (isset($msg["text"]))
+	if (isset($msg["text"])) {
 		$msg["text"] = decryptMessage($msg["text"]);
+		if ($users[$_SESSION["user"]]["theme"] == "dark") {
+			if ($msg["color"] == "#000000")
+				$msg["color"] = str_replace ($msg["color"], "#ffffff", "#000000");
+			else
+				$msg["color"] = str_replace ($msg["color"], "#000000", "#ffffff");
+		}
+	}
 }
 echo json_encode(array_slice($messages, -27));
