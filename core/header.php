@@ -84,7 +84,7 @@
 			echo '
 				<a href="register.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-signature"></i> '. $lang["page"]["register"] .'</a>
 			';
-		} else if ((strrpos ($_SERVER["REQUEST_URI"], "imprint.php") != false) or (strrpos ($_SERVER["REQUEST_URI"], "privacy.php") != false)) {
+		} else if ((strrpos ($_SERVER["REQUEST_URI"], "imprint.php") != false) or (strrpos ($_SERVER["REQUEST_URI"], "privacy_policy.php") != false) or (strrpos ($_SERVER["REQUEST_URI"], "terms_of_use.php") != false)) {
 			echo '
 				<a href="login.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-sign-in"></i> '. $lang["page"]["login"] .'</a>
 				<a href="register.php" class="w3-bar-item w3-button w3-padding w3-hover-white w3-hover-text-theme"><i class="fas fa-signature"></i> '. $lang["page"]["register"] .'</a>

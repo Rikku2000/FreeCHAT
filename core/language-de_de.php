@@ -49,7 +49,8 @@ $lang["message"]["allowed"]="Erlaubt.";
 $lang["message"]["failed"]="Upload fehlgeschlagen.";
 
 $lang["page"]["imprint"]="Impressum";
-$lang["page"]["privacy"]="Datenschutz";
+$lang["page"]["privacy_policy"]="Datenschutzerklärung";
+$lang["page"]["terms_of_use"]="Nutzungsbedingungen";
 $lang["page"]["welcome"]="Willkommen";
 $lang["page"]["menu"]="Menü";
 $lang["page"]["admin"]="Admin";
@@ -143,6 +144,65 @@ $lang["template"]["text11"]='
 	<strong>Halten Sie es einfach:</strong> Vermeiden Sie unnötige Komplexität in Ihren Nachrichten, um der Unterhaltung leichter folgen zu können.
 ';
 
-$lang["imprint"]["text1"] = '';
-$lang["privacy"]["text"] = '';
+$lang["imprint"]["text"] = '
+	<p>
+	<b>Betreiber:</b> <b>'. TITLE .'</b> — öffentlich zugänglicher, kostenloser, nicht-kommerzieller Chat.</br></br>
+	<b>Kontakt:</b> <b>'. OWNER_MAIL .'</b></br>
+	<b>Postanschrift:</b> Nicht öffentlich; wird auf verifizierte Anfrage zur Wahrnehmung von Rechten nach der DSGVO mitgeteilt.</br></br>
+	<b>Hosting:</b> <b>'. OWNER_PROVIDER .'</b>, Serverstandort(e): <b>'. OWNER_COUNTRY .'</b>.
+	</p>
+';
+
+$lang["terms_of_use"]["text"] = '
+	<p>
+	Gültig ab: <b>'. OWNER_DATE .'</b>
+	<ul>
+	<li><b>Geltungsbereich:</b> Diese Bedingungen regeln die Nutzung von „<b>'. TITLE .'</b>“.</li>
+	<li><b>Mindestalter:</b> Nutzung ab 16 Jahren (oder höher, wenn das lokale Recht dies verlangt).</li>
+	<li><b>Privat / nicht kommerziell:</b> Nur zur persönlichen Nutzung; kein Weiterverkauf, keine öffentliche Bereitstellung.</li>
+	<li><b>Zulässige Nutzung:</b> Keine Rechtsverstöße; keine Belästigung/Spam; keine Versuche, den Dienst zu stören; keine Daten Dritter ohne Rechtsgrundlage hochladen.</li>
+	<li><b>Ihre Inhalte:</b> Rechte verbleiben bei Ihnen; Sie räumen uns eine begrenzte Lizenz ein, Inhalte zum Betrieb/Verbessern des Dienstes zu hosten und zu verarbeiten.</li>
+	<li><b>Verfügbarkeit:</b> Bereitgestellt „wie besehen“; Funktionen können sich ändern.</li>
+	<li><b>Kostenlos:</b> Der Dienst ist unentgeltlich; es gibt keine kostenpflichtigen Funktionen oder Abos.</li>
+	<li><b>Haftung:</b> Haftung bei Vorsatz/grober Fahrlässigkeit und für Schäden aus Verletzung von Leben, Körper oder Gesundheit; im Übrigen nur für vorhersehbare, vertragstypische Schäden bei Verletzung wesentlicher Pflichten. Zwingende Verbraucherrechte bleiben unberührt.</li>
+	<li><b>Änderungen:</b> Wir können diese Bedingungen anpassen; über wesentliche Änderungen informieren wir in der App oder per E-Mail.</li>
+	<li><b>Recht & Gerichtsstand:</b> Für EU/EWR/UK-Verbraucher gelten die zwingenden Vorschriften des Wohnsitzstaats; ansonsten Recht von <b>'. OWNER_COUNTRY .'</b>.</li>
+	<li><b>Kontakt:</b> <b>'. OWNER_MAIL .'</b></li>
+	</ul>
+	</p>
+';
+
+$lang["privacy_policy"]["text"] = '
+	<p>
+	Gültig ab: <b>'. OWNER_DATE .'</b></br></br>
+	<b>Verantwortlicher (Art. 4 Nr. 7 DSGVO):</b> <b>'. TITLE .'</b> — öffentlich zugänglicher, kostenloser, nicht-kommerzieller Chat.</br>
+	<b>Kontakt:</b> <b>'. OWNER_MAIL .'</b></br>
+	<b>Postanschrift:</b> Auf verifizierte Anfrage (nicht öffentlich).</br>
+	<b>EU-Vertreter (Art. 27, falls außerhalb EU/EWR):</b> <b>'. OWNER_NAME .'</b>.</br>
+	<b>Datenschutzbeauftragter (Art. 37):</b> <b>'. OWNER_NAME .'</b>.
+	<h4>Verarbeitete Daten</h4>
+	<b>Chat-Inhalte:</b> Nachrichten, Anhänge</br>
+	<b>Nutzungs-/Protokolldaten:</b> IP-Adresse, Zeitstempel</br>
+	<b>Kontodaten:</b> Nutzername, Passwort-Hash</br>
+	<b>Cookies/Local Storage:</b> technisch notwendig
+	<h4>Zwecke & Rechtsgrundlagen (Art. 6 DSGVO)</h4>
+	<b>Betrieb des Dienstes/Moderation:</b> Art. 6 Abs. 1 lit. b oder lit. f</br>
+	<b>Sicherheit & Missbrauchsabwehr:</b> Art. 6 Abs. 1 lit. f</br>
+	<b>Rechtspflichten/Anfragen:</b> Art. 6 Abs. 1 lit. c</br>
+	<b>Support-Kommunikation:</b> Art. 6 Abs. 1 lit. b/c
+	<h4>Aufbewahrung (Art. 5 Abs. 1 lit. e)</h4>
+	<b>Chats:</b> 30 Tage / Löschung durch Administratoren</br>
+	<b>Logs:</b> 90 Tage / Löschung durch Administratoren</br>
+	<b>Kontodaten:</b> Keine befristung der dauer des Kontos bis zur Löschung
+	<h4>Ihre Rechte (Art. 12–22)</h4>
+	Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerspruch sowie Widerruf von Einwilligungen mit Wirkung für die Zukunft. Kontakt: <b>'. OWNER_MAIL .'</b>. Antwort binnen eines Monats.</br>
+	<b>Beschwerde:</b> <b>'. OWNER_MAIL .'</b>
+	<h4>Cookies</h4>
+	Technisch notwendige Cookies sind immer aktiv.
+	<h4>Automatisierte Entscheidungen</h4>
+	Keine automatisierten Entscheidungen mit Rechtswirkung oder ähnlicher erheblichen Beeinträchtigung (Art. 22).
+	<h4>Sicherheit (Art. 32)</h4>
+	Zugriffskontrollen, Least-Privilege, Backups, Monitoring, Schwachstellen-Management.
+	</p>
+';
 ?>

@@ -54,7 +54,7 @@
 	echo '
 		<div class="w3-bottom w3-theme-white w3-box">
 			<div class="w3-container w3-center">
-				- <a class="w3-link w3-hover-text-theme" href="imprint.php">'. $lang["page"]["imprint"] .'</a> | <a class="w3-link w3-hover-text-theme" href="privacy.php">'. $lang["page"]["privacy"] .'</a> -
+				- <a class="w3-link w3-hover-text-theme" href="imprint.php">'. $lang["page"]["imprint"] .'</a> | <a class="w3-link w3-hover-text-theme" href="privacy_policy.php">'. $lang["page"]["privacy_policy"] .'</a> | <a class="w3-link w3-hover-text-theme" href="terms_of_use.php">'. $lang["page"]["terms_of_use"] .'</a> -
 			</div>
 		</div>
 	';
