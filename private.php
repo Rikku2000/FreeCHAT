@@ -120,7 +120,7 @@
 				}
 
 				function fetchTyping(){
-					fetch("core/fetch_typing.php?target=room:<?=urlencode($room)?>").then(r=>r.json()).then(users=>{
+					fetch("core/fetch_typing.php?target=private:<?=urlencode($key)?>").then(r=>r.json()).then(users=>{
 						let div = document.getElementById("typingIndicator");
 						if(!div){
 							const container = document.querySelector(".w3-container") || document.body;
