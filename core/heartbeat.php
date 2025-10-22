@@ -13,7 +13,7 @@ if(isset($_GET["logout"])){
 		$messages[$room][] = [
 			"name"=>CHATBOT,
 			"text"=>encryptMessage("<small>". $users[$user]['name'] ." ". $lang["message"]["left"] ."</small>"),
-			"color"=>"#9E0F22",
+			"color"=>"#E44235",
 			"style"=>"italic",
 			"icon"=>"fa-genderless",
 			"time"=>date("H:i:s")
@@ -29,7 +29,7 @@ if(!$alreadyInRoom){
     $messages[$room][] = [
 		"name"=>CHATBOT,
         "text"=>encryptMessage("<small>". $users[$user]['name'] ." ". $lang["message"]["joined"] ."</small>"),
-        "color"=>"#062721",
+        "color"=>"#3A984A",
         "style"=>"italic",
         "icon"=>"fa-genderless",
         "time"=>date("H:i:s")

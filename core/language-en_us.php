@@ -145,4 +145,7 @@ $lang["template"]["text11"]='
 	<strong>Use Proper Grammar and Spelling:</strong> Maintain clear and understandable communication.</br>
 	<strong>Keep it Simple:</strong> Avoid unnecessary complexity in your messages to make the conversation easier to follow.
 ';
+
+$lang["imprint"]["text1"] = '';
+$lang["privacy"]["text"] = '';
 ?>

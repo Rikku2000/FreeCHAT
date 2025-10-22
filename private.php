@@ -46,16 +46,11 @@
 			echo '<option value="#000000">Default</option>';
 
 		echo '
-						<option value="#9E0F22" style="color: #9E0F22;">Dark Red</option>
-						<option value="#E44235" style="color: #E44235;">Light Red</option>
-						<option value="#111C4E" style="color: #111C4E;">Dark Blue</option>
-						<option value="#1083C4" style="color: #1083C4;">Light Blue</option>
-						<option value="#062721" style="color: #062721;">Dark Green</option>
-						<option value="#3A984A" style="color: #3A984A;">Light Green</option>
-						<option value="#C08856" style="color: #C08856;">Dark Yellow</option>
-						<option value="#F4B72B" style="color: #F4B72B;">Light Yellow</option>
-						<option value="#11151F" style="color: #11151F;">Dark Gray</option>
-						<option value="#A8ACBA" style="color: #A8ACBA;">Light Gray</option>
+						<option value="#E44235" style="color: #E44235;">Red</option>
+						<option value="#1083C4" style="color: #1083C4;">Blue</option>
+						<option value="#3A984A" style="color: #3A984A;">Green</option>
+						<option value="#F4B72B" style="color: #F4B72B;">Yellow</option>
+						<option value="#A8ACBA" style="color: #A8ACBA;">Gray</option>
 					</select>
 					<select class="w3-select-theme w3-left" id="style" style="width: 19%;">
 						<option value="normal" style="font-style: normal;">Normal</option>

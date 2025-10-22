@@ -5,17 +5,12 @@
 	echo '
 		<img class="w3-image w3-hide-small" src="assets/winx-os_tan.png" style="bottom: 0; right: 0; position: absolute; opacity: 0.2; z-index: 10;">
 		<div class="w3-theme-white">
-			<div class="w3-half">
-				<div class="w3-row-padding w3-margin-bottom">
-					<p><h4 class="w3-text-theme"><strong>'. $lang["page"]["imprint"] .'</strong></h4></p>
-					<p>
-						
-					</p>
-				</div>
-			</div>
-			<div class="w3-half">
-				<div class="w3-row-padding w3-margin-bottom">
-
+			<header class="w3-container w3-text-theme">
+				<h4><strong><i class="fas fa-user"></i> '. $lang["page"]["imprint"] .'</strong></h4>
+			</header>
+			<div class="w3-row-padding w3-margin-bottom">
+				<div class="w3-container">
+					'. $lang["imprint"]["text"] .'
 				</div>
 			</div>
 		</div>

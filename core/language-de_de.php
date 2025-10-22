@@ -142,4 +142,7 @@ $lang["template"]["text11"]='
 	<strong>Achten Sie auf korrekte Grammatik und Rechtschreibung:</strong> Sorgen Sie für eine klare und verständliche Kommunikation.</br>
 	<strong>Halten Sie es einfach:</strong> Vermeiden Sie unnötige Komplexität in Ihren Nachrichten, um der Unterhaltung leichter folgen zu können.
 ';
+
+$lang["imprint"]["text1"] = '';
+$lang["privacy"]["text"] = '';
 ?>

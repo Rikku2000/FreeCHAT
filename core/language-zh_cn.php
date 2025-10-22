@@ -110,4 +110,7 @@ $lang["invite"]["title"]="私聊请求";
 $lang["invite"]["text"]="想要开始私聊。";
 $lang["invite"]["enable"]="启用";
 $lang["invite"]["disable"]="禁用";
+
+$lang["imprint"]["text1"] = '';
+$lang["privacy"]["text"] = '';
 ?>

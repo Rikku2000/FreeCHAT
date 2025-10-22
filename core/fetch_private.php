@@ -12,12 +12,10 @@ $users=load_users();
 foreach ($messages as &$msg) {
 	if (isset($msg["text"])) {
 		$msg["text"] = decryptMessage($msg["text"]);
-		if ($users[$me]["theme"] == "dark") {
-			if ($msg["color"] == "#000000")
-				$msg["color"] = str_replace ($msg["color"], "#ffffff", "#000000");
-			else
-				$msg["color"] = str_replace ($msg["color"], "#000000", "#ffffff");
-		}
+		if (($users[$_SESSION["user"]]["theme"] == "dark") && ($msg["color"] == "#000000"))
+			$msg["color"] = str_replace ($msg["color"], "#ffffff", "#000000");
+		else if (($users[$_SESSION["user"]]["theme"] == "light") && ($msg["color"] == "#ffffff"))
+			$msg["color"] = str_replace ($msg["color"], "#000000", "#ffffff");
 	}
 }
 echo json_encode(array_slice($messages, -27));
