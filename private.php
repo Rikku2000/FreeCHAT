@@ -19,11 +19,10 @@
 			<header class="w3-container w3-text-theme">
 				<h4><strong><i class="fas fa-user"></i> '. $lang["private"]["title"] .'</strong> <span class="w3-hide-small">- '. htmlspecialchars($users[$other]["name"]) .'</span></h4>
 			</header>
-			<div class="w3-row-padding w3-margin-bottom">
-				<div class="w3-table-scroll w3-border w3-border-theme-light">
+			<div class="w3-container">
+				<div class="w3-table-scroll">
 					<div class="w3-table-scroll w3-chatfield" id="chat" style="overflow-y: scroll; padding: 1px;"></div>
 				</div>
-				<div class="w3-hide-small w3-tiny" id="typingIndicator" style="float: left; font-style: italic; color: #aaa; width: 100%;"></div>
 			</div>
 			<div class="w3-bottom w3-theme-white w3-chatcontainer">
 				<form onsubmit="sendPrivate(event)">
@@ -62,6 +61,7 @@
 
 	echo '
 				</form>
+				<div class="w3-hide-small w3-tiny" id="typingIndicator" style="float: left; font-style: italic; color: #aaa; bottom: 6px; width: 100%; position: absolute;"></div>
 			</div>
 	';
 ?>
@@ -120,13 +120,27 @@
 				}
 
 				function fetchTyping(){
-					fetch("core/fetch_typing.php?target=private:<?=urlencode($key)?>").then(r=>r.json()).then(users=>{
+					fetch("core/fetch_typing.php?target=room:<?=urlencode($room)?>").then(r=>r.json()).then(users=>{
 						let div = document.getElementById("typingIndicator");
-						if(users.length > 0){
-							div.innerText = users.join(", ") +" <?php echo $lang["private"]["typing"]; ?>";
+						if(!div){
+							const container = document.querySelector(".w3-container") || document.body;
+							div = document.createElement("div");
+							div.id = "typingIndicator";
+							div.className = "w3-tiny";
+							container.appendChild(div);
+						}
+						if(Array.isArray(users) && users.length > 0){
+							div.innerText = users.join(", ") + " <?php echo $lang["chat"]["typing"]; ?>";
+							div.style.display = "block";
+							div.style.fontStyle = "italic";
+							div.style.color = "#aaa";
 						} else {
 							div.innerText = "";
+							div.style.display = "none";
 						}
+					}).catch(()=>{
+						const div = document.getElementById("typingIndicator");
+						if(div){ div.style.display = "none"; }
 					});
 				}
 

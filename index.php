@@ -18,15 +18,14 @@
 			<header class="w3-container w3-text-theme">
 				<h4><strong><i class="fas fa-house"></i> '. htmlspecialchars($room) .'</strong> <span class="w3-hide-small">- '. htmlspecialchars($rooms[$room]['description']) .'</span> '. $message .'</h4>
 			</header>
-			<div class="w3-row-padding w3-margin-bottom">
+			<div class="w3-container">
 				<div class="w3-hide-small" id="privatechat"></div>
-				<div class="w3-table-scroll w3-border w3-border-theme-light w3-threequarter">
+				<div class="w3-table-scroll w3-threequarter">
 					<div class="w3-table-scroll w3-chatfield" id="chatBox" style="overflow-y: scroll; padding: 1px;"></div>
 				</div>
-				<div class="w3-table-scroll w3-border w3-border-theme-light w3-quarter">
+				<div class="w3-table-scroll w3-quarter">
 					<div class="w3-table-scroll w3-border w3-border-theme-light w3-hide-small w3-chatfield" id="onlineUsers" style="overflow-y: scroll; padding: 1px;"></div>
 				</div>
-				<div class="w3-hide-small w3-tiny" id="typingIndicator" style="float: left; font-style: italic; color: #aaa; width: 100%;"></div>
 			</div>
 			<div class="w3-bottom w3-theme-white w3-chatcontainer">
 				<form id="chatForm">
@@ -67,6 +66,7 @@
 
 	echo '
 				</form>
+				<div class="w3-hide-small w3-tiny" id="typingIndicator" style="float: left; font-style: italic; color: #aaa; bottom: 6px; width: 100%; position: absolute;"></div>
 			</div>
 	';
 ?>
@@ -165,11 +165,25 @@
 				function fetchTyping(){
 					fetch("core/fetch_typing.php?target=room:<?=urlencode($room)?>").then(r=>r.json()).then(users=>{
 						let div = document.getElementById("typingIndicator");
-						if(users.length > 0){
-							div.innerText = users.join(", ") +" <?php echo $lang["chat"]["typing"]; ?>";
+						if(!div){
+							const container = document.querySelector(".w3-container") || document.body;
+							div = document.createElement("div");
+							div.id = "typingIndicator";
+							div.className = "w3-tiny";
+							container.appendChild(div);
+						}
+						if(Array.isArray(users) && users.length > 0){
+							div.innerText = users.join(", ") + " <?php echo $lang["chat"]["typing"]; ?>";
+							div.style.display = "block";
+							div.style.fontStyle = "italic";
+							div.style.color = "#aaa";
 						} else {
 							div.innerText = "";
+							div.style.display = "none";
 						}
+					}).catch(()=>{
+						const div = document.getElementById("typingIndicator");
+						if(div){ div.style.display = "none"; }
 					});
 				}
 
@@ -378,7 +392,7 @@
 					currentInviteFrom = null;
 				});
 
-				setInterval(fetchTyping, <?=PRIVATEINTERVAL?>);
+				setInterval(fetchTyping, 100);
 				setInterval(loadOnlineUsers, <?=ONLINEINTERVAL?>);
 				setInterval(check_invites, <?=INVITEINTERVAL?>);
 				setInterval(fetchMessages, <?=MESSAGEINTERVAL?>);
