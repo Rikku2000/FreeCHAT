@@ -161,6 +161,13 @@
 	echo '
 		</nav>
 	';
-?>
 
-		<div class="w3-main" style="height: 90vh; margin-left: 300px; margin-top: 42px;">
+	
+	if (
+		(strrpos ($_SERVER["REQUEST_URI"], "index.php")) ||
+		(strrpos ($_SERVER["REQUEST_URI"], "private.php"))
+	) {
+		echo '<div class="w3-main" style="height: 90vh; margin-left: 300px; margin-top: 42px; overflow: hidden;">';
+	} else
+		echo '<div class="w3-main" style="height: 90vh; margin-left: 300px; margin-top: 42px;">';
+?>
