@@ -3,7 +3,7 @@
 	include "core/header.php";
 
 	echo '
-		<img class="w3-image w3-hide-small" src="assets/winx-os_tan.png" style="bottom: 0; right: 0; position: absolute; opacity: 0.2; z-index: 10;">
+		<img class="w3-image w3-hide-small" src="assets/winx-os_tan.png" style="bottom: 32; right: 0; position: absolute; opacity: 0.2; z-index: 10;">
 		<div class="w3-theme-white">
 			<header class="w3-container w3-text-theme">
 				<h4><strong><i class="fas fa-user"></i> '. $lang["page"]["privacy_policy"] .'</strong></h4>

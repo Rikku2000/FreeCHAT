@@ -1,6 +1,6 @@
 <?php
 	echo '
-		<img class="w3-image w3-hide-small" src="assets/winx-os_tan.png" style="bottom: 0; right: 0; position: absolute; opacity: 0.2; z-index: 10;">
+		<img class="w3-image w3-hide-small" src="assets/winx-os_tan.png" style="bottom: 32; right: 0; position: absolute; opacity: 0.2; z-index: 10;">
 		<div class="w3-theme-white">
 			<div class="w3-half">
 				<div class="w3-row-padding w3-margin-bottom w3-center">
